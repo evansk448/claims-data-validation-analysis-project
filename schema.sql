@@ -1,4 +1,4 @@
-##CLAIMANTS TABLE
+## CLAIMANTS TABLE
 
 CREATE TABLE claimants (
     claimant_id INT PRIMARY KEY,
@@ -8,7 +8,7 @@ CREATE TABLE claimants (
     state CHAR(2)
 );
 
-##POLICIES TABLE
+## POLICIES TABLE
   
 CREATE TABLE policies (
     policy_id INT PRIMARY KEY,
@@ -18,7 +18,7 @@ CREATE TABLE policies (
     expiration_date DATE
 );
 
-##CLAIMS TABLE
+## CLAIMS TABLE
   
 CREATE TABLE claims (
     claim_id INT PRIMARY KEY,
@@ -32,7 +32,7 @@ CREATE TABLE claims (
     FOREIGN KEY (policy_id) REFERENCES policies(policy_id)
 );
 
-##PAYMENTS TABLE
+## PAYMENTS TABLE
   
 CREATE TABLE payments (
     payment_id INT PRIMARY KEY,
