@@ -1,6 +1,6 @@
 ## CLAIMS WITHOUT ASSOCIATED PAYMENTS
 -- Purpose: Identifies claims that do not contain matching payment records, could indicate incomplete processing workflows.
--- Screenshot:
+-- Screenshot: Screenshots/no_associated_pmts_query.png
 
 SELECT * FROM claims
 LEFT JOIN payments ON payments.claim_id = claims.claim_id 
