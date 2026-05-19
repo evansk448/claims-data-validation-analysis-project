@@ -6,15 +6,11 @@ SELECT * FROM claims
 LEFT JOIN payments ON payments.claim_id = claims.claim_id WHERE payments.claim_id IS NULL;
 
 ---
-
-```sql id="2jlwm8"
--- Query: Negative Payment Amounts
+## NEGATIVE PAYMENT AMOUNTS
 -- Purpose: Identify invalid payment records containing negative payment amounts.
+-- Screenshots: 
 
-SELECT *
-FROM payments
-WHERE payments.payment_amount < 0;
-```
+SELECT * FROM payments WHERE payments.payment_amount < 0;
 
 ---
 
