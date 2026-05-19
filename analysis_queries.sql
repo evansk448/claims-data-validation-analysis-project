@@ -41,7 +41,7 @@ GROUP BY claims.claim_status;
 -----
 
 ## TOTAL PAYMENTS GROUPED BY PAYMENT STATUES
--- Purpose: Summarize payment amounts grouped by payment status to analyze processed versus pending payment activity.
+-- Purpose: Summarize payment amounts grouped by payment status to analyze processed vs. pending payment activity.
 
 SELECT payments.payment_status, SUM(payments.payment_amount) AS total_payments
 FROM payments
