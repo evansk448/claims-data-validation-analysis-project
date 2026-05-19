@@ -1,4 +1,4 @@
-## total claims per state
+## TOTAL CLAIMS PER STATE
 
 SELECT claimants.state, COUNT(claims.claim_id) AS total_claims
 FROM claims
@@ -6,7 +6,7 @@ FROM claims
 GROUP BY claimants.state
 ORDER BY total_claims DESC;
 
-> total payments issued per claim <
+> TOTAL PAYMENTS ISSUED PER CLAIM <
 
 SELECT payments.claim_id, SUM(payments.payment_amount) AS total_paid
 FROM payments
