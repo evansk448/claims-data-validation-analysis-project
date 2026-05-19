@@ -8,6 +8,8 @@ FROM claims
 GROUP BY claimants.state
 ORDER BY total_claims DESC;
 
+-----
+
 ## TOTAL PAYMENTS ISSUED PER CLAIM
 -- Purpose: Calculate the total amount paid on each claim by summing all associated payment records.
 -- Screenshot: Screenshots/pmts_per_clm_query.jpg
@@ -15,6 +17,8 @@ ORDER BY total_claims DESC;
 SELECT payments.claim_id, SUM(payments.payment_amount) AS total_paid
 FROM payments
 GROUP BY payments.claim_id;
+
+-----
 
 ## TOTAL CLAIMS PER POLICY TYPE
 -- Purpose: Count the number of claims associated with each policy type to identify claim distribution across insurance products.
@@ -24,6 +28,8 @@ FROM claims
   JOIN policies ON policies.policy_id = claims.policy_id
 GROUP BY policies.policy_type;
 
+-----
+
 ## AVERAGE RESERVE AMOUNT PER CLAIM STATUS
 -- Purpose: Calculate the average reserve amount for each claim status category to evaluate financial exposure across claim statuses.
 -- Screenshot: Screenshots/reserve_per_clmstatus_query.png
@@ -31,6 +37,8 @@ GROUP BY policies.policy_type;
 SELECT claims.claim_status, AVG(claims.reserve_amount) AS average_reserve
 FROM claims
 GROUP BY claims.claim_status;
+
+-----
 
 ## TOTAL PAYMENTS GROUPED BY PAYMENT STATUES
 -- Purpose: Summarize payment amounts grouped by payment status to analyze processed versus pending payment activity.
