@@ -1,4 +1,4 @@
-> total claims per state <
+## total claims per state
 
 SELECT claimants.state, COUNT(claims.claim_id) AS total_claims
 FROM claims
