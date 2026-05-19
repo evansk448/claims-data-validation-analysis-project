@@ -30,6 +30,6 @@ WHERE claims.claim_status = 'Closed' AND payments.payment_status = 'Pending';
 -- Screenshot:
 
 SELECT claims.claim_id,claims.reserve_amount,payments.payment_amount FROM claims
-JOIN payments ON claims.claim_id = payments.claim_id
+JOIN payments ON payments.claim_id = claims.claim_id
 WHERE payments.payment_amount > claims.reserve_amount;
 
