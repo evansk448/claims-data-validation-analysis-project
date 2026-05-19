@@ -10,7 +10,6 @@ WHERE payments.claim_id IS NULL;
 
 ## NEGATIVE PAYMENT AMOUNTS
 -- Purpose: Identifies invalid payment records containing negative payment amounts.
--- Screenshot: 
 
 SELECT * FROM payments WHERE payments.payment_amount < 0;
 
@@ -18,7 +17,7 @@ SELECT * FROM payments WHERE payments.payment_amount < 0;
 
 ## CLOSED CLAIMS WITH PENDING PAYMENTS
 -- Purpose: Identifies claims marked as closed but still have pending payment activity, could indicate workflow inconsistencies.
--- Screenshot:
+-- Screenshot: Screenshots/closed_with_pending_query.png
 
 SELECT claims.claim_id, claims.claim_status, payments.payment_status FROM claims
 JOIN payments ON payments.claim_id = claims.claim_id
