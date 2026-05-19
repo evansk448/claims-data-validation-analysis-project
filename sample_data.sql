@@ -1,4 +1,4 @@
-> CLAIMANTS <
+## CLAIMANTS
 
 INSERT INTO claimants VALUES
 (1001, 'John', 'Smith', 'Insured', 'GA'),
@@ -12,7 +12,7 @@ INSERT INTO claimants VALUES
 (1009, 'Christopher', 'Jackson', 'Third Party', 'TN'),
 (1010, 'Amanda', 'White', 'Insured', 'GA');
 
-> POLICIES <
+## POLICIES
 
 INSERT INTO policies VALUES
 (2001, 'AUTO-1001', 'Auto', '2025-01-01', '2026-01-01'),
@@ -26,7 +26,7 @@ INSERT INTO policies VALUES
 (2009, 'AUTO-1009', 'Auto', '2025-09-01', '2026-09-01'),
 (2010, 'HOME-1010', 'Home', '2025-10-01', '2026-10-01');
 
-> CLAIMS <
+## CLAIMS
 
 INSERT INTO claims VALUES
 (3001, 2001, 1001, '2025-01-15', 'Open', 5000.00),
@@ -41,7 +41,7 @@ INSERT INTO claims VALUES
 (3010, 2010, 1010, '2025-10-25', 'Open', 8500.00),
 (3011, 2001, 1003, '2025-11-15', 'Open', 4000.00);
 
-> PAYMENTS <
+## PAYMENTS
 
 INSERT INTO payments VALUES
 (4001, 3001, 1500.00, '2025-01-20', 'Processed'),
