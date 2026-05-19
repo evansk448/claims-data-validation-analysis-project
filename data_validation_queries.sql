@@ -27,7 +27,7 @@ WHERE claims.claim_status = 'Closed' AND payments.payment_status = 'Pending';
 
 ## PAYMENTS GREATER THAN RESERVE AMOUNT
 -- Purpose: Identifies payment records that exceed the claim reserve amount, could indicate financial discrepancies or inaccurate reserving.
--- Screenshot:
+-- Screenshot: Screenshots/pmt_over_reserve_query.png
 
 SELECT claims.claim_id,claims.reserve_amount,payments.payment_amount FROM claims
 JOIN payments ON payments.claim_id = claims.claim_id
