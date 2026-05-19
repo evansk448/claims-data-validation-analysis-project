@@ -16,7 +16,7 @@ GROUP BY payments.claim_id;
 
 SELECT policies.policy_type, COUNT(claims.claim_id) AS total_claims
 FROM claims
-  JOIN policies ON polices.policy_id = claims.policy_id
+  JOIN policies ON policies.policy_id = claims.policy_id
 GROUP BY policies.policy_type;
 
 > average reserve amount per claim status <
