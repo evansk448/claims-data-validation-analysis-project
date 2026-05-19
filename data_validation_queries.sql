@@ -3,7 +3,8 @@
 -- Screenshot:
 
 SELECT * FROM claims
-LEFT JOIN payments ON payments.claim_id = claims.claim_id WHERE payments.claim_id IS NULL;
+LEFT JOIN payments ON payments.claim_id = claims.claim_id 
+WHERE payments.claim_id IS NULL;
 
 -----
 
