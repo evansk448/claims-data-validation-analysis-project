@@ -17,3 +17,21 @@ This project uses SQL to analyze and validate a mock insurance claims database. 
 - Claims workflow understanding
 - QA/data testing mindset
 
+## Recommended Viewing Order
+1. schema.sql
+   - Creates the database tables and relationships
+
+2. sample_data.sql
+   - Inserts mock insurance claims data into the database
+
+3. analysis_queries.sql
+   - Contains SQL queries used for business reporting/trend analysis
+
+4. data_validation_queries.sql
+   - Contains SQL queries focused on identifying data quality/workflow issues
+
+5. findings.md
+   - Summarizes key observations and validation findings from the project
+
+6. Screenshots/
+   - Contains example query outputs and database visuals
