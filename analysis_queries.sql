@@ -18,7 +18,6 @@ GROUP BY payments.claim_id;
 
 ## TOTAL CLAIMS PER POLICY TYPE
 -- Purpose: Count the number of claims associated with each policy type to identify claim distribution across insurance products.
--- Screenshot: Screenshots/clms_by_policytype_query.png
 
 SELECT policies.policy_type, COUNT(claims.claim_id) AS total_claims
 FROM claims
@@ -35,7 +34,6 @@ GROUP BY claims.claim_status;
 
 ## TOTAL PAYMENTS GROUPED BY PAYMENT STATUES
 -- Purpose: Summarize payment amounts grouped by payment status to analyze processed versus pending payment activity.
--- Screenshot: Screenshots/pmts_by_pmtstatus_query.png
 
 SELECT payments.payment_status, SUM(payments.payment_amount) AS total_payments
 FROM payments
